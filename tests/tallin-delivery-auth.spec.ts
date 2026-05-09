@@ -31,8 +31,8 @@ test('Positive auth test', async ({ page }) => {
     const password = page.locator('[data-name="password-input"]');
     const signInBtn = page.locator('[data-name="signIn-button"]');
 
-    await username.fill(process.env.username);
-    await password.fill(process.env.password);
+    await username.fill(process.env.USERNAME);
+    await password.fill(process.env.PASSWORD);
     await expect(signInBtn).toBeEnabled();
     await signInBtn.click();
     await expect(page.getByRole('heading', { name: 'Create Order' })).toBeVisible();
