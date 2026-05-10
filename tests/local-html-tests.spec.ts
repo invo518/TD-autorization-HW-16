@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 const path = require('path');
 
 test.beforeEach(async ({ page }) => {
-    const filePath = `file://${path.resolve('html/dummy-order.html')}`; // file:///C:/Work/tl_02.26/playwright-intro/html/dummy-order.html
+    const filePath = `file://${path.resolve('html/dummy-order.html')}`;
     await page.goto(filePath);
 });
 

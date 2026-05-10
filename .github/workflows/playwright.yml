@@ -11,7 +11,7 @@ jobs:
     env:
 
         APP_URL: ${{ secrets.APP_URL }}
-        USERNAME: ${{ secrets.USERNAME }}
+        USERNAME: ${{ secrets.USER }}
         PASSWORD: ${{ secrets.PASSWORD }}
 
     timeout-minutes: 60

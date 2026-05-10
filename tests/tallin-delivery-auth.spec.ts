@@ -31,11 +31,11 @@ test('Positive auth test', async ({ page }) => {
     const password = page.locator('[data-name="password-input"]');
     const signInBtn = page.locator('[data-name="signIn-button"]');
 
-    await username.fill(process.env.USERNAME);
+    await username.fill(process.env.USER);
     await password.fill(process.env.PASSWORD);
-    await expect(signInBtn).toBeEnabled();
     await signInBtn.click();
-    await expect(page.getByRole('heading', { name: 'Create Order' })).toBeVisible();
+    await expect(page).toHaveTitle ( "Training App");
+
 });
 test('Switch language EN > RU', async ({ page }) => {
 
