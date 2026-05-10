@@ -6,8 +6,16 @@ on:
     branches: [ main, master ]
 jobs:
   test:
-    timeout-minutes: 60
     runs-on: ubuntu-latest
+
+    env:
+
+        APP_URL: ${{ secrets.APP_URL }}
+        USERNAME: ${{ secrets.USER }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+
+    timeout-minutes: 60
+
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4

@@ -1,0 +1,24 @@
+Playwright UI Tests
+
+1. Clone repository
+
+git clone "https://github.com/AndrewKhv/playwright-intro.git"
+
+2.Install dependencies
+
+npm install
+
+3.Create .env file in the project root
+
+APP_URL=https://fe-delivery.tallinn-learning.ee
+username=your_login
+password=your_password
+
+4.Install Playwright browsers
+npx playwright install
+
+5.Run tests in UI mode:
+npx playwright test --ui
+
+
+
